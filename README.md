@@ -1,4 +1,5 @@
 **Agentic Financial Insights Workflow Using AWS Bedrock**
+
 This project implements an Agentic AI financial analysis system powered by AWS Bedrock and modern LLM workflows. The system processes raw financial transactions and generates categorized data, financial KPIs, personalized summaries, and refinement feedback using a multi-stage agentic loop (Plan → Categorize → KPI Compute → Summarize → Reflect).
 
 The project demonstrates:
