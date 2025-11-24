@@ -1,0 +1,32 @@
+{
+  "plan": [
+    {
+      "step": 1,
+      "goal": "Observation of dataset inputs.",
+      "action": "Collect transaction records, validate schema, and form an initial understanding of the financial month."
+    },
+    {
+      "step": 2,
+      "goal": "Action: Categorization.",
+      "action": "Apply deterministic financial categories to each transaction using rule-based and contextual reasoning."
+    },
+    {
+      "step": 3,
+      "goal": "Observation: Compute KPIs.",
+      "action": "Use categorized results to calculate core performance indicators including spending, income, averages, and top merchants."
+    },
+    {
+      "step": 4,
+      "goal": "Summarization.",
+      "action": "Generate a <100 word financial summary using computed analytics."
+    },
+    {
+      "step": 5,
+      "goal": "Reflection.",
+      "action": "Review all prior outputs, identify areas of uncertainty or incorrect logic, and propose improvements for a rerun."
+    }
+  ]
+}
+
+
+
