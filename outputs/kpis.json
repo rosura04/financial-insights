@@ -1,0 +1,21 @@
+{
+  "kpis": {
+    "total_spend": 1336.68,
+    "total_income": 3600.0,
+    "average_expense": 34.86,
+    "top_merchants": [
+      {
+        "merchant": "Amazon",
+        "count": 3
+      },
+      {
+        "merchant": "Payroll",
+        "count": 2
+      },
+      {
+        "merchant": "Target",
+        "count": 1
+      }
+    ]
+  }
+}

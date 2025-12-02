@@ -1,0 +1,20 @@
+- **Potential Issues**
+  - Inconsistent merchant categorization: "Target" is listed in top merchants but not in the sample data.
+  - Missing data validation: No explicit check for missing or inconsistent data in the dataset.
+  - Incomplete categorization: Some merchants might not have predefined categories.
+  - KPI calculation inconsistencies: Potential issues with rounding or aggregation methods.
+  - Summary report: Lack of detailed breakdown of spending by category.
+
+- **Suggested Improvements**
+  - Validate and standardize merchant categorization: Ensure all merchants are categorized correctly.
+  - Implement data validation: Check for missing or inconsistent data before processing.
+  - Expand predefined categories: Include more merchants in the categorization rules.
+  - Review KPI calculation methods: Ensure consistency in rounding and aggregation.
+  - Enhance summary report: Include detailed breakdowns of spending by category and merchant.
+
+- **Next Iteration Focus**
+  - Detailed validation of dataset: Check for missing or inconsistent data.
+  - Comprehensive merchant categorization: Ensure all merchants are categorized accurately.
+  - Review and refine KPI calculations: Ensure accuracy and consistency.
+  - Generate more detailed summary reports: Include category-wise and merchant-wise breakdowns.
+  - Implement feedback loop: Incorporate user feedback to improve categorization and reporting.

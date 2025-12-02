@@ -1,0 +1,208 @@
+{
+  "categorized": [
+    {
+      "date": "2024-10-01",
+      "merchant": "Starbucks",
+      "amount": 6.45,
+      "category": "Dining"
+    },
+    {
+      "date": "2024-10-01",
+      "merchant": "Amazon",
+      "amount": 32.89,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-02",
+      "merchant": "Uber Eats",
+      "amount": 24.1,
+      "category": "Dining"
+    },
+    {
+      "date": "2024-10-03",
+      "merchant": "Comcast",
+      "amount": 89.99,
+      "category": "Utilities"
+    },
+    {
+      "date": "2024-10-03",
+      "merchant": "Payroll",
+      "amount": -1800.0,
+      "category": "Income"
+    },
+    {
+      "date": "2024-10-04",
+      "merchant": "Trader Joe's",
+      "amount": 54.23,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-05",
+      "merchant": "Shell",
+      "amount": 42.1,
+      "category": "Utilities"
+    },
+    {
+      "date": "2024-10-06",
+      "merchant": "Apple Store",
+      "amount": 129.99,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-06",
+      "merchant": "Chipotle",
+      "amount": 12.85,
+      "category": "Dining"
+    },
+    {
+      "date": "2024-10-07",
+      "merchant": "Water Utility",
+      "amount": 45.6,
+      "category": "Utilities"
+    },
+    {
+      "date": "2024-10-08",
+      "merchant": "Amazon",
+      "amount": 18.75,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-09",
+      "merchant": "PayPal Refund",
+      "amount": -22.5,
+      "category": "Other"
+    },
+    {
+      "date": "2024-10-10",
+      "merchant": "Target",
+      "amount": 86.9,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-11",
+      "merchant": "Dunkin",
+      "amount": 7.25,
+      "category": "Dining"
+    },
+    {
+      "date": "2024-10-12",
+      "merchant": "Electric Co",
+      "amount": 102.4,
+      "category": "Utilities"
+    },
+    {
+      "date": "2024-10-13",
+      "merchant": "Domino's",
+      "amount": 21.99,
+      "category": "Dining"
+    },
+    {
+      "date": "2024-10-14",
+      "merchant": "CVS",
+      "amount": 14.32,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-15",
+      "merchant": "Spotify",
+      "amount": 9.99,
+      "category": "Utilities"
+    },
+    {
+      "date": "2024-10-16",
+      "merchant": "Walmart",
+      "amount": 64.57,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-17",
+      "merchant": "Payroll",
+      "amount": -1800.0,
+      "category": "Income"
+    },
+    {
+      "date": "2024-10-18",
+      "merchant": "McDonald's",
+      "amount": 8.49,
+      "category": "Dining"
+    },
+    {
+      "date": "2024-10-19",
+      "merchant": "Best Buy",
+      "amount": 249.99,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-20",
+      "merchant": "City Gas",
+      "amount": 38.2,
+      "category": "Utilities"
+    },
+    {
+      "date": "2024-10-21",
+      "merchant": "Amazon",
+      "amount": 27.99,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-22",
+      "merchant": "DoorDash",
+      "amount": 34.18,
+      "category": "Dining"
+    },
+    {
+      "date": "2024-10-23",
+      "merchant": "Home Depot",
+      "amount": 73.44,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-24",
+      "merchant": "AT&T",
+      "amount": 75.0,
+      "category": "Utilities"
+    },
+    {
+      "date": "2024-10-25",
+      "merchant": "Trader Joe's",
+      "amount": 48.35,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-26",
+      "merchant": "Walgreens",
+      "amount": 17.9,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-27",
+      "merchant": "Amazon",
+      "amount": 56.7,
+      "category": "Shopping"
+    },
+    {
+      "date": "2024-10-28",
+      "merchant": "Payroll",
+      "amount": -1800.0,
+      "category": "Income"
+    },
+    {
+      "date": "2024-10-29",
+      "merchant": "Panda Express",
+      "amount": 13.2,
+      "category": "Dining"
+    },
+    {
+      "date": "2024-10-30",
+      "merchant": "Netflix",
+      "amount": 15.49,
+      "category": "Utilities"
+    },
+    {
+      "date": "2024-10-31",
+      "merchant": "Whole Foods",
+      "amount": 82.14,
+      "category": "Shopping"
+    }
+  ]
+}
