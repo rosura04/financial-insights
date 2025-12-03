@@ -239,6 +239,23 @@ print(response["output"])
 from validators import validate_json
 validate_json(response, "schemas/plan_schema.json")
 ```
+**JSON Troubleshooting Notes**
+
+Throughout development, we encountered several JSON-related issues:
+Common Problems:
+- LLM adding commentary instead of raw JSON
+- Missing commas or mismatched braces
+- Mis-typed field names
+- Arrays not properly closed
+- Categories incorrectly capitalized
+
+Fixes Implemented:
+- Stronger “return only JSON” constraints
+- Added regex sanitization for stray characters
+- JSON schema validation with automatic retries
+- Used smaller, simpler field names
+- Added reflection to detect errors
+
 **Team Roles:**
 - Mohammad - Prompt Engineer
 - Rusayla - Financial Analyst
