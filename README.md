@@ -54,7 +54,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Add AWS credentials
-Create a **.env** file:
+Update the **.env** file:
 ```
 AWS_ACCESS_KEY_ID=YOUR_KEY
 AWS_SECRET_ACCESS_KEY=YOUR_SECRET
