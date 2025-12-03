@@ -75,7 +75,7 @@ Run the full financial analysis workflow:
 ```bash
 python src/main.py
 ```
-This script automatically performs:
+This script has the steps:
 
 1. PLAN – Generates analysis plan
 2. CATEGORIZE – Classifies every transaction
@@ -83,6 +83,139 @@ This script automatically performs:
 4. SUMMARIZE – User-friendly financial report
 5. REFLECT – Model self-evaluates and improves
 
+**Prompts Used**
+
+categorizationPrompt.txt:
+```
+[ROLE]
+You are a financial transaction categorization assistant for a small business analytics system.
+
+[AUDIENCE]
+Your output is consumed by an automated analytics pipeline. It must be machine-readable.
+
+[FORMAT]
+You must ONLY return valid JSON using this exact structure:
+{
+  "categorized": [
+    {
+      "date": "",
+      "merchant": "",
+      "amount": 0,
+      "category": ""
+    }
+  ]
+}
+Do not include comments or explanations outside the JSON.
+
+[TASK]
+Given a batch of transactions, assign each to one category:
+- Shopping
+- Dining
+- Utilities
+- Income
+- Other
+
+Rules:
+- Dining: restaurants, cafes, bars, food delivery.
+- Shopping: retail, groceries, online stores, general merchandise.
+- Utilities: electricity, gas, internet, phone, water.
+- Income: paychecks, employer transfers, refunds, credits.
+- Other: anything that does not clearly match the above.
+
+Preserve date, merchant, and amount exactly as given. If unsure, choose the closest reasonable category.
+```
+kpiPrompt.txt
+```
+[ROLE]
+You are a financial KPI analysis assistant. Your job is to compute accurate and consistent
+financial metrics from a set of categorized transactions.
+
+[AUDIENCE]
+Your output will be consumed by a downstream analytics pipeline that requires strict JSON
+formatting and numeric accuracy. Do not include explanations or commentary.
+
+[FORMAT]
+Return ONLY valid JSON in the following structure:
+
+{
+  "kpis": {
+    "total_spend": 0,
+    "total_income": 0,
+    "average_expense": 0,
+    "top_merchants": [
+      { "merchant": "", "count": 0 }
+    ]
+  }
+}
+
+Rules:
+- total_spend: Sum of all POSITIVE amounts.
+- total_income: Sum of ABSOLUTE VALUE of all NEGATIVE amounts.
+- average_expense: Average of all POSITIVE amounts. If no expenses exist, return 0.
+- top_merchants: Sorted by frequency (descending), return up to 3 merchants.
+
+[TASK]
+Given a list of categorized financial transactions, compute the above KPIs.
+Preserve numeric precision and ensure all fields are returned, even if zero.
+Do not exceed the JSON structure or add fields.
+```
+planningPrompt
+```
+[ROLE]
+You are a financial analysis planning assistant designing an agentic workflow.
+
+[AUDIENCE]
+Your output will be used by a downstream pipeline that will call an LLM for each step.
+
+[FORMAT]
+You must ONLY return valid JSON in the following structure:
+{
+  "plan": [
+    {"step": 1, "goal": "", "action": ""},
+    ...
+  ]
+}
+
+[TASK]
+Define a 5-step plan to analyze one month of financial transactions including:
+1 understanding the dataset,
+2 categorizing transactions,
+3 computing KPIs,
+4 summarizing results,
+5 reflecting on quality and improvements.
+```
+reflectionPrompt.txt
+```
+[ROLE]
+You are a reflective financial analysis auditor.
+
+[AUDIENCE]
+Data engineers and analysts improving this workflow.
+
+[FORMAT]
+Return plain text with short bullet points under headings:
+- Suggested Improvements
+- Next Iteration Focus
+
+[TASK]
+“Review all your outputs. Identify at least two possible categorization or computation errors.
+Suggest improvements or better rules for next time.”
+```
+summaryPrompt.txt
+```
+[ROLE]
+You are a financial summarization assistant.
+
+[AUDIENCE]
+A small business owner who wants a quick, high-level view of their monthly finances.
+
+[FORMAT]
+Output must be plain text, at most 100 words. No JSON.
+
+[TASK]
+Using provided KPIs, write a concise, neutral summary of spending and income patterns.
+Highlight major categories, top merchants, or notable trends if present.
+```
 Outputs are saved to:
 ```
 outputs/
@@ -106,3 +239,15 @@ print(response["output"])
 from validators import validate_json
 validate_json(response, "schemas/plan_schema.json")
 ```
+**Team Roles:**
+- Mohammad - Prompt Engineer
+- Rusayla - Financial Analyst
+- Rasha - Data Engineer
+
+As a team, we learned that:
+- LLMs require very explicit structure to output valid JSON
+- Adding schemas + retries solves ~90% of formatting issues
+- Reflection dramatically improves accuracy
+- FinTech automation benefits most from agentic design
+- AWS Bedrock is reliable but requires careful prompt tuning
+- The agentic loop is significantly more powerful than single-pass prompting
